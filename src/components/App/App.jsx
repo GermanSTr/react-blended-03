@@ -6,7 +6,9 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Header />}>
-        <Route />
+        <Route index element={<Home />} />
+        <Route path="/country" element={<CountrySearch />} />
+        <Route path="/country/:countryId" element={<Country />} />
       </Route>
     </Routes>
   );
